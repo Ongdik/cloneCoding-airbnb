@@ -74,6 +74,7 @@ header ul a {
   align-items: center;
   font-size: var(--font-small);
   padding: var(--padding-size);
+  white-space: nowrap;
 }
 
 main {
@@ -84,16 +85,19 @@ main ul {
   flex-wrap: wrap;
 }
 main ul li {
-  padding: var(--padding-size);
-}
-main .roomList {
-  display: flex;
+  padding: calc(var(--padding-size) / 2);
 }
 
-main .roomList .img {
-  flex: 1 1 75%;
-  max-width: 250px;
-  max-height: 250px;
+@media screen and (min-width: 500px) {
+  main ul li {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main ul li {
+    width: 33%;
+  }
 }
 
 main .roomList .img img {
@@ -101,15 +105,28 @@ main .roomList .img img {
 }
 
 main .roomList .roomInfo {
-  flex: 1 1 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main .roomList .roomInfo .locationAndRating {
   display: flex;
   justify-content: space-between;
 }
+main .roomList .roomInfo .locationAndRating .location {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  width: 45vw;
+}
+main .roomList .roomInfo .locationAndRating .rating {
+  font-size: var(--font-small);
+  white-space: nowrap;
+}
 
-main .roomList .roomInfo .locationAndRating i {
+main .roomList .roomInfo i {
   margin-right: calc(var(--padding-size) / 4);
 }
 
@@ -117,6 +134,10 @@ main .roomList .roomInfo .host,
 main .roomList .roomInfo .day {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 
 footer {
@@ -133,4 +154,10 @@ footer ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: var(--font-small);
+}
+
+footer ul li a i {
+  margin-bottom: calc(var(--padding-size) / 4);
+  font-size: var(--font-large);
 }
