@@ -1,0 +1,136 @@
+:root {
+  /* color */
+  --black-color: #140a00;
+  --pink-color: #fd91af;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* font-size */
+  --font-large: 1.2rem;
+  --font-medium: 1rem;
+  --font-small: 0.77rem;
+
+  /* padding */
+  --padding-size: 1.5em;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  border: solid 1px var(--grey-dark-color);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grey-dark-color);
+}
+
+header :hover {
+  color: var(--black-color);
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--padding-size);
+}
+
+.search .searchIconAndText {
+  display: flex;
+  align-items: center;
+}
+.search .searchIconAndText i {
+  margin-right: calc(var(--padding-size) / 2);
+}
+.search .searchIconAndText .text {
+  display: flex;
+  flex-direction: column;
+}
+.search .searchIconAndText .text .textWhen {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+header ul {
+  display: flex;
+  padding: 0 var(--padding-size);
+  border-bottom: solid 1px var(--grey-light-color);
+  margin-bottom: var(--padding-size);
+}
+header ul a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-small);
+  padding: var(--padding-size);
+}
+
+main {
+  padding: var(--padding-size);
+}
+main ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+main ul li {
+  padding: var(--padding-size);
+}
+main .roomList {
+  display: flex;
+}
+
+main .roomList .img {
+  flex: 1 1 75%;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+main .roomList .img img {
+  width: 100%;
+}
+
+main .roomList .roomInfo {
+  flex: 1 1 25%;
+}
+
+main .roomList .roomInfo .locationAndRating {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .roomList .roomInfo .locationAndRating i {
+  margin-right: calc(var(--padding-size) / 4);
+}
+
+main .roomList .roomInfo .host,
+main .roomList .roomInfo .day {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+footer {
+  padding: var(--padding-size);
+  border-top: solid 1px var(--grey-light-color);
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
